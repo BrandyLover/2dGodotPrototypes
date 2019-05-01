@@ -1,0 +1,1 @@
+Made the default 2d plataformer with kinematic body have a double jump
