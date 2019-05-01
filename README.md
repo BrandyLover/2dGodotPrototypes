@@ -1,4 +1,4 @@
-#2dGodotPrototypes
+# 2dGodotPrototypes
 (EN) 2D Game protoypes using the Godot Engine
 
 Trying to use C# to make games in the Godot Engine
