@@ -1,0 +1,1 @@
+Default 2d plataformer template using RigiBody movement
