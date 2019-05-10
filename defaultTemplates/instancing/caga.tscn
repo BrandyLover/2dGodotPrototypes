@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://caga.cs" type="Script" id=1]
+
+[node name="Panel" type="Panel"]
+margin_right = 97.0
+margin_bottom = 51.0
+script = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 23.5857
+margin_top = 4.67824
+margin_right = 74.5857
+margin_bottom = 18.6782
+text = "O CAGA"
+
+[node name="Button" type="Button" parent="."]
+margin_left = 13.7927
+margin_top = 25.0755
+margin_right = 85.7927
+margin_bottom = 45.0755
+text = "Press me"
+
