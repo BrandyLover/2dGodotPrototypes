@@ -2,19 +2,19 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/blue.png-4d748ed6429caf8afc2e9d3803eadf6e.stex"
+path="res://.import/brickwall_wip.png-c35f0903cf630be92d16efa05b7e0ec3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://blue.png"
-dest_files=[ "res://.import/blue.png-4d748ed6429caf8afc2e9d3803eadf6e.stex" ]
+source_file="res://brickwall_wip.png"
+dest_files=[ "res://.import/brickwall_wip.png-c35f0903cf630be92d16efa05b7e0ec3.stex" ]
 
 [params]
 
-compress/mode=0
+compress/mode=3
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
