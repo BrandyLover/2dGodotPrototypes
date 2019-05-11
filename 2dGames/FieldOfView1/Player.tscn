@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Player.cs" type="Script" id=1]
-[ext_resource path="res://redblob_pointer.png" type="Texture" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 33.0
@@ -15,9 +15,12 @@ shape = SubResource( 1 )
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 
-[node name="Rotating" type="Node2D" parent="."]
+[node name="MouseFollow" type="Node2D" parent="."]
 
-[node name="PlayerSprite" type="Sprite" parent="Rotating"]
+[node name="PlayerSprite" type="Sprite" parent="MouseFollow"]
 rotation = 1.5708
 texture = ExtResource( 2 )
+
+[node name="BulletSpawn" type="Position2D" parent="MouseFollow"]
+position = Vector2( 50, 0 )
 
