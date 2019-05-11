@@ -1,13 +1,15 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://brickwall_wip.png" type="Texture" id=1]
-[ext_resource path="res://brown.png" type="Texture" id=2]
+[ext_resource path="res://Properties.cs" type="Script" id=1]
+[ext_resource path="res://brickwall_wip.png" type="Texture" id=2]
+[ext_resource path="res://brown.png" type="Texture" id=3]
 
 [node name="WorldTileSet" type="Node2D"]
+script = ExtResource( 1 )
 
 [node name="brickwall_wip" type="Sprite" parent="."]
 position = Vector2( 32, 32 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="brickwall_wip"]
 
@@ -16,5 +18,5 @@ polygon = PoolVector2Array( 32, 32, 32, -32, -32, -32, -32, 32 )
 
 [node name="brown" type="Sprite" parent="."]
 position = Vector2( 32, 96 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
