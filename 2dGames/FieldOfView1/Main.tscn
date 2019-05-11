@@ -16,5 +16,4 @@ tile_data = PoolIntArray( -65537, 0, 0, -131072, 0, 0, -131071, 0, 0, -131070, 0
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 546.765, 59.775 )
 
-
 [editable path="TileMaps"]
