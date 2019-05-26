@@ -6,14 +6,22 @@ public class main : Node2D
     // Declare member variables here. Examples:
     // private int a = 2;
     // private string b = "text";
-    private AudioStreamPlayer musicPlayer;
-    private int musicCounter = 1;
+    private AudioStreamPlayer Track1,Track2;
+
+
+
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
 
-        musicPlayer = GetNode<AudioStreamPlayer>("MusicPlayer");
-        musicPlayer.Connect("finished", this, nameof(_MusicFinished));
+
+        Track1 = GetNode("Sound").GetNode<AudioStreamPlayer>("Track1");
+        Track1.Connect("finished", this, nameof(_Track1Finished));
+
+        Track2 = GetNode("Sound").GetNode<AudioStreamPlayer>("Track2");
+        Track2.Connect("finished", this, nameof(_Track2Finished));
+        
+        Track1.Play();
     }
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -22,25 +30,15 @@ public class main : Node2D
 //      
 //  }
 
-    public void _MusicFinished()
+    public void _Track1Finished()
     {
-        musicCounter++;
-        switch (musicCounter)
-        {
-            case 1:
-                musicPlayer.Stream.SetPath("res://audio/1.ogg");
-                break;
-            
-            case 2:
-                musicPlayer.Stream.SetPath("res://audio/2.ogg");
-                break;
+        Track1.Stop();
+        Track2.Play();
+    }
 
-            default: 
-                musicCounter = 1;
-                break;
-        }
-
-        musicPlayer.Play(0);
-            
+    public void _Track2Finished()
+    {
+        Track2.Stop();
+        Track1.Play();
     }
 }
