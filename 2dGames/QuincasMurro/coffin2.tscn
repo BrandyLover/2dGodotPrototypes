@@ -24,8 +24,8 @@ __meta__ = {
 [node name="martim" parent="casa quincas" instance=ExtResource( 3 )]
 
 [node name="paste_nego" parent="casa quincas" instance=ExtResource( 4 )]
-editor/display_folded = true
-position = Vector2( 876.138, 266.627 )
+position = Vector2( 575.606, 374.024 )
+scale = Vector2( 0.158, 0.158 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="casa quincas/paste_nego"]
 autoplay = "Moving2"
@@ -33,4 +33,6 @@ playback_speed = 0.5
 anims/Moving2 = ExtResource( 5 )
 
 [node name="TextFrame" parent="casa quincas" instance=ExtResource( 6 )]
+margin_top = 0.0
+margin_bottom = 200.0
 script = ExtResource( 7 )

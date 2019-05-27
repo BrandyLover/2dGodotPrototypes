@@ -10,7 +10,8 @@ public class coffin1 : Node2D
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
-        GetParent().GetNode("SelectionScreen").QueueFree();
+        if(GetParent().Name == "main")
+            GetParent().GetNode("SelectionScreen").QueueFree();
     }
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.
