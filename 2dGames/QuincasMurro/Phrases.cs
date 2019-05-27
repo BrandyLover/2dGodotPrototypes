@@ -1,20 +1,13 @@
 
 using System;
 
-<<<<<<< HEAD
 public static class Phrases 
-=======
-public class Phrases : Node
->>>>>>> parent of 2cdee66... Text pipeline WIP
 {
     // Declare member variables here. Examples:
     // private int a = 2;
     // private string b = "text";
-<<<<<<< HEAD
     public static string[] PhrasesScene1 = {
-=======
-    public string[] PhrasesScene1 = {
->>>>>>> parent of 2cdee66... Text pipeline WIP
+    
         "(Narrador) Eduardo estirou as pernas, pensou em sua cama. Doía-lhe o pescoço. No canto doquarto, Curió, Péde-Vento e cabo Martim conversavam em voz baixa, numa discussão apaixonante: qual deles substituiria Quincas no coração e no leito de Quitéria do OlhoArregalado?",
 "(Eduardo) – Me digam uma coisa...",
 "(Cabo Martim) – Às suas ordens, meu comandante.",
@@ -25,11 +18,7 @@ public class Phrases : Node
 "(Eduardo) – Tá aí para vocês comprarem uns sanduíches. Mas não deixem ele sozinho. Nem um minuto, hein!",
 "(Cabo Martim) – Pode ir descansado, a gente faz companhia a ele."
     };
-<<<<<<< HEAD
     public static string[] PhrasesScene2 ={
-=======
-    public string[] PhrasesScene2 ={
->>>>>>> parent of 2cdee66... Text pipeline WIP
         "(Narrador) Negro Pastinha acordou quando sentiu o cheiro de cachaça. Antes de começar a beber, Curió e Pé-de-Vento acenderam cigarros.",
 "(Negro pastinha)– Está um senhor! Um defunto porreta!",
 "(Negro pastinha)– Um defunto porreta!",
@@ -42,11 +31,7 @@ public class Phrases : Node
 "(Cabo Martim) – Mas já foi alguma coisa. O resto o padre faz amanhã."
     };
     // Called when the node enters the scene tree for the first time.
-<<<<<<< HEAD
     public static string[] PhrasesScene3 = {
-=======
-    public string[] PhrasesScene3 = {
->>>>>>> parent of 2cdee66... Text pipeline WIP
     "(Narrador) Entre cabo Martim e Curió recomeçou a discussão sobre Quitéria do Olho Arregalado. Com a bebida, Curió ficava mais combativo, elevava a voz em defesa dos seus interesses. Negro Pastinha reclamou:",
     "(Negro Pastinha) – Vocês não têm vergonha de disputar a mulher dele na vista dele? Ele ainda quente e vocês que nem urubu em carniça?",
     "(Pé-de-Vento.)– Ele é que pode decidir... – disse Pé-de-Vento.",
