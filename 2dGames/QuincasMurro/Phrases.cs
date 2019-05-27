@@ -1,7 +1,6 @@
 using Godot;
 using System;
 
-<<<<<<< HEAD
 public static class Phrases 
 {
     // Declare member variables here. Examples:
@@ -40,6 +39,23 @@ public static class Phrases
     "(Negro Pastinha) – Tá vendo? Ele não está gostando dessa conversa.",
     "(Cabo Martim) – Vamos dar um gole a ele também... –"
     };
-=======
->>>>>>> parent of a99ed32...  preparing to add GodotTIE to QuincasMurro
+
+    public static string[] PhrasesScene4 = {
+    "(Narrador) Cantavam os quatro, a voz de baixo do Negro Pastinha ia perder-se mais além da ladeira, no rumo dos saveiros. Bebiam e cantavam. Quincas não perdia nem um gole, nem um som, gostava de cantigas.",
+"(Curió) – Não era hoje de noite a moqueca de Mestre Manuel?",
+"(Pé-de-Vento) – Hoje mesmo.",
+"(Pé-de-Vento) - Moqueca de arraia.",
+"(Cabo Martim) – Ninguém faz moqueca igual a Maria Clara.",
+"(Negro Pastinha) – Tá doidinho pela moqueca.",
+"(Negro Pastinha) – E por que a gente não vai? Mestre Manuel é até capaz de ficar ofendido.",
+"(Narrador)Entreolharam-se. Já estavam um pouco atrasados pois ainda tinham de ir buscar as mulheres.",
+"(Curió) – A gente prometeu não deixar ele sozinho.",
+"(Negro Pastinha) – Sozinho? Por quê? Ele vai com a gente.",
+"(Negro Pastinha) – Tou com fome –",
+"Consultaram Quincas:",
+"(Pé-de-Vento)– Tu quer ir?",
+"(Quincas) – Tou por acaso aleijado, pra ficar aqui?",
+"Saem de cena rumo ao Mestre Manuel e suas moquecas."
+    };
+}
 

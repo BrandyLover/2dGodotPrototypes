@@ -1,14 +1,14 @@
 using Godot;
 using System;
 
-public class TextFrame : TextureRect
+public class TextFrame2 : TextureRect
 {
     // Declare member variables here. Examples:
     // private int a = 2;
     // private string b = "text";
 
     [Signal] public delegate void NextScene();
-    private string[] PHRASES = Phrases.PhrasesScene1;
+    private string[] PHRASES = Phrases.PhrasesScene2;
     private char[] charArray;
     private float elapsed = 0;
     

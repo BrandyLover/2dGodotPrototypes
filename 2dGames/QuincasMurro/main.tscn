@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://main.cs" type="Script" id=1]
 [ext_resource path="res://sprites/titlescreen.jpg" type="Texture" id=2]
@@ -6,14 +6,11 @@
 [ext_resource path="res://Quit.cs" type="Script" id=4]
 [ext_resource path="res://audio/1.ogg" type="AudioStream" id=5]
 [ext_resource path="res://audio/2.ogg" type="AudioStream" id=6]
-[ext_resource path="res://addons/GodotTIE/text_interface_engine.gd" type="Script" id=7]
-[ext_resource path="res://addons/GodotTIE/GodotTIE_icon.png" type="Texture" id=8]
 
 [node name="main" type="Node2D"]
 script = ExtResource( 1 )
 
 [node name="SelectionScreen" type="Panel" parent="."]
-editor/display_folded = true
 margin_right = 1024.0
 margin_bottom = 600.0
 grow_horizontal = 0
@@ -102,14 +99,3 @@ bus = "Music"
 [node name="Track2" type="AudioStreamPlayer" parent="Sound"]
 stream = ExtResource( 6 )
 bus = "Music"
-
-[node name="TextInterfaceEngine" type="ReferenceRect" parent="."]
-margin_left = 190.0
-margin_top = 172.0
-margin_right = 396.0
-margin_bottom = 257.0
-hint_tooltip = "(Narrador) Eduardo estirou as pernas, pensou em sua cama. Doía-lhe o pescoço. No canto doquarto, Curió, Péde-Vento e cabo Martim conversavam em voz baixa, numa discussão apaixonante: qual deles substituiria Quincas no coração e no leito de Quitéria do OlhoArregalado?\""
-script = ExtResource( 7 )
-__meta__ = {
-"_editor_icon": ExtResource( 8 )
-}

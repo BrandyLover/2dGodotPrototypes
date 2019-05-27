@@ -1,14 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://sprites/UI/textBox.png" type="Texture" id=1]
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 [ext_resource path="res://TextFrame.cs" type="Script" id=2]
->>>>>>> parent of 2cdee66... Text pipeline WIP
-=======
-[ext_resource path="res://TextBOX.cs" type="Script" id=2]
->>>>>>> parent of a99ed32...  preparing to add GodotTIE to QuincasMurro
 
 [node name="TextFrame" type="TextureRect"]
 margin_left = 40.0
@@ -17,21 +10,11 @@ margin_right = 984.0
 margin_bottom = 600.0
 texture = ExtResource( 1 )
 expand = true
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 script = ExtResource( 2 )
-=======
->>>>>>> parent of a99ed32...  preparing to add GodotTIE to QuincasMurro
 
-[node name="TextoBOX" type="RichTextLabel" parent="."]
+[node name="TextBOX" type="RichTextLabel" parent="."]
 margin_left = 60.0
 margin_top = 14.0
 margin_right = 884.0
 margin_bottom = 186.0
 bbcode_enabled = true
-<<<<<<< HEAD
->>>>>>> parent of 2cdee66... Text pipeline WIP
-=======
-script = ExtResource( 2 )
->>>>>>> parent of a99ed32...  preparing to add GodotTIE to QuincasMurro

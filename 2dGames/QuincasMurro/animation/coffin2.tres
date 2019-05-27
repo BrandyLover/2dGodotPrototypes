@@ -1,0 +1,29 @@
+[gd_resource type="Animation" format=2]
+
+[resource]
+resource_name = "Moving2"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4, 5, 6, 6.2, 6.3, 6.4, 6.5, 6.6, 6.9, 7, 7.1, 7.9, 8.4, 8.9, 9.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 876.138, 266.627 ), Vector2( 876.138, 266.627 ), Vector2( 796.718, 362.292 ), Vector2( 766.936, 385.757 ), Vector2( 776.863, 385.757 ), Vector2( 761.521, 387.562 ), Vector2( 775.961, 381.245 ), Vector2( 763.326, 382.147 ), Vector2( 773.253, 382.147 ), Vector2( 764.228, 253.09 ), Vector2( 690.224, 256.7 ), Vector2( 689.321, 260.31 ), Vector2( 613.511, 255.797 ), Vector2( 568.386, 285.58 ), Vector2( 569.289, 272.042 ), Vector2( 575.606, 374.024 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 4, 8.9 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 0.157684, 0.157684 ), Vector2( -0.158, 0.158 ), Vector2( 0.158, 0.158 ) ]
+}
