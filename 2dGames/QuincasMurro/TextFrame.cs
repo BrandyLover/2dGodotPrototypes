@@ -6,6 +6,7 @@ public class TextFrame : TextureRect
     // Declare member variables here. Examples:
     // private int a = 2;
     // private string b = "text";
+<<<<<<< HEAD
 
     [Signal] public delegate void NextScene();
     private string[] PHRASES = Phrases.PhrasesScene1;
@@ -18,10 +19,14 @@ public class TextFrame : TextureRect
     
     RichTextLabel TextBOX;
     
+=======
+    [Export] public int PhraseIndex = 0;
+>>>>>>> parent of 2cdee66... Text pipeline WIP
     
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
+<<<<<<< HEAD
         TextBOX = GetNode<RichTextLabel>("TextBOX");
         this.GetNode<Timer>("Timer").Connect("timeout",this,nameof(_Triggered));
         
@@ -80,4 +85,8 @@ public class TextFrame : TextureRect
 }
 
 
+=======
+        
+    }
+>>>>>>> parent of 2cdee66... Text pipeline WIP
 

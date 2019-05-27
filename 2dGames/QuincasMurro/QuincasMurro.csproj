@@ -54,7 +54,6 @@
     <Compile Include="Phrases.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Quit.cs" />
-    <Compile Include="TextBOX.cs" />
     <Compile Include="TextFrame.cs" />
     <Compile Include="TextTest.cs" />
   </ItemGroup>

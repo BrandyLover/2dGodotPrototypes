@@ -1,6 +1,10 @@
 [gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://sprites/UI/textBox.png" type="Texture" id=1]
+<<<<<<< HEAD
+=======
+[ext_resource path="res://TextFrame.cs" type="Script" id=2]
+>>>>>>> parent of 2cdee66... Text pipeline WIP
 
 [node name="TextFrame" type="TextureRect"]
 margin_left = 40.0
@@ -9,3 +13,14 @@ margin_right = 984.0
 margin_bottom = 600.0
 texture = ExtResource( 1 )
 expand = true
+<<<<<<< HEAD
+=======
+script = ExtResource( 2 )
+
+[node name="TextoBOX" type="RichTextLabel" parent="."]
+margin_left = 60.0
+margin_top = 14.0
+margin_right = 884.0
+margin_bottom = 186.0
+bbcode_enabled = true
+>>>>>>> parent of 2cdee66... Text pipeline WIP
