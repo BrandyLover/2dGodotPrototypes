@@ -1,6 +1,7 @@
-
+using Godot;
 using System;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 public static class Phrases 
 =======
@@ -54,10 +55,6 @@ public class Phrases : Node
     "(Negro Pastinha) – Tá vendo? Ele não está gostando dessa conversa.",
     "(Cabo Martim) – Vamos dar um gole a ele também... –"
     };
+=======
+>>>>>>> parent of a99ed32...  preparing to add GodotTIE to QuincasMurro
 
-//  // Called every frame. 'delta' is the elapsed time since the previous frame.
-//  public override void _Process(float delta)
-//  {
-//      
-//  }
-}
