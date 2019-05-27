@@ -1,9 +1,5 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 {"res://main.cs":{"modified_time":1558903698,"class":{"namespace":"","class_name":"main","nested":false}},"res://MusicPlayer.cs":{"modified_time":1558892347,"class":{"namespace":"","class_name":"MusicPlayer","nested":false}},"res://Quit.cs":{"modified_time":1558903563,"class":{"namespace":"","class_name":"Quit","nested":false}},"res://TextBOX.cs":{"modified_time":1558914485,"class":{"namespace":"","class_name":"TextBOX","nested":false}},"res://TextFrame.cs":{"modified_time":1558918129,"class":{"namespace":"","class_name":"TextFrame","nested":false}},"res://TextTest.cs":{"modified_time":1558914788,"class":{"namespace":"","class_name":"TextTest","nested":false}}}
 =======
 {"res://main.cs":{"modified_time":1558903698,"class":{"namespace":"","class_name":"main","nested":false}},"res://MusicPlayer.cs":{"modified_time":1558892347,"class":{"namespace":"","class_name":"MusicPlayer","nested":false}},"res://Quit.cs":{"modified_time":1558903563,"class":{"namespace":"","class_name":"Quit","nested":false}}}
 >>>>>>> parent of 2cdee66... Text pipeline WIP
-=======
-{"res://main.cs":{"modified_time":1558903698,"class":{"namespace":"","class_name":"main","nested":false}},"res://MusicPlayer.cs":{"modified_time":1558892347,"class":{"namespace":"","class_name":"MusicPlayer","nested":false}},"res://Quit.cs":{"modified_time":1558903563,"class":{"namespace":"","class_name":"Quit","nested":false}},"res://TextBOX.cs":{"modified_time":1558914401,"class":{"namespace":"","class_name":"TextBOX","nested":false}},"res://TextFrame.cs":{"modified_time":1558914414,"class":{"namespace":"","class_name":"TextFrame","nested":false}}}
->>>>>>> parent of a99ed32...  preparing to add GodotTIE to QuincasMurro
