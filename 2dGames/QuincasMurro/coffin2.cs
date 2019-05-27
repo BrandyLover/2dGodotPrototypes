@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class coffin1 : Node2D
+public class coffin2 : Node2D
 {
     // Declare member variables here. Examples:
     // private int a = 2;
@@ -11,7 +11,7 @@ public class coffin1 : Node2D
     public override void _Ready()
     {
         if(GetParent().Name == "main")
-            GetParent().GetNode("SelectionScreen").QueueFree();
+            GetParent().GetNode("coffin1").QueueFree();
         GetNode<AudioStreamPlayer>("Dublagem").Play();
         GetNode<AudioStreamPlayer>("Dublagem").Connect("finished", this, nameof(_DublagemEnd));
     }

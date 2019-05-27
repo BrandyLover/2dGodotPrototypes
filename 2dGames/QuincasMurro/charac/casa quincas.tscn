@@ -23,11 +23,10 @@ __meta__ = {
 [node name="paste_nego" parent="." instance=ExtResource( 4 )]
 
 [node name="eduardo" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1103.01, 335.743 )
-rotation = 0.00435841
+position = Vector2( 441.944, 232.444 )
+rotation = -1.57343
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="eduardo"]
 autoplay = "coffin1"
-playback_speed = 0.5
 anims/Moving = ExtResource( 6 )
 anims/coffin1 = ExtResource( 6 )

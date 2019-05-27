@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="coffin1.cs" />
+    <Compile Include="coffin2.cs" />
     <Compile Include="main.cs" />
     <Compile Include="MusicPlayer.cs" />
     <Compile Include="Phrases.cs" />
