@@ -10,11 +10,12 @@ public class TextFrame : TextureRect
     [Signal] public delegate void NextScene();
     private string[] PHRASES = Phrases.PhrasesScene1;
     private char[] charArray;
-    private float elapsed = 0;
+    private float elapsed ;
     
 
     private bool textStart = false, skipText = false;
-    private int nextChari = 0,phrasei = 0;
+    private int phrasei = 0, charArrayIndex = 0;
+    
     RichTextLabel TextBOX;
     
     
@@ -22,8 +23,18 @@ public class TextFrame : TextureRect
     public override void _Ready()
     {
         TextBOX = GetNode<RichTextLabel>("TextBOX");
-
+        this.GetNode<Timer>("Timer").Connect("timeout",this,nameof(_Triggered));
+        
         textStart = true;
+        UpdatePhrase(phrasei);
+    }
+
+ // Called every frame. 'delta' is the elapsed time since the previous frame.
+    public override void _Process(float delta)
+    {
+        //Checks if the player wants to skip the text
+        if(Input.IsActionPressed("ui_accept"))
+            skipText = true;
     }
 
     public void _StartText()
@@ -31,78 +42,42 @@ public class TextFrame : TextureRect
         textStart = true;
     }
 
-//  // Called every frame. 'delta' is the elapsed time since the previous frame.
-    public override void _Process(float delta)
+    public  void _Triggered()
     {
-        elapsed += delta;
-        charArray =  PHRASES[phrasei].ToCharArray();
-        if(Input.IsActionPressed("ui_accept"))
-            skipText = true;
-        
-        if(textStart && !skipText){
-                if(elapsed == 0.5f && (phrasei < PHRASES.Length) )
-                {
-                    if(nextChari < charArray.Length){
-                        GD.Print(charArray[nextChari]);
-                        nextChari++;
+        if(textStart && !skipText ){
+                    if( phrasei < PHRASES.Length && charArrayIndex < charArray.Length )
+                    {   
+                        TextBOX.AddText(charArray[charArrayIndex].ToString());
+                        charArrayIndex++;
                     }
-                    else
-                        phrasei++; nextChari = 0;
-                }
-                else if( phrasei > PHRASES.Length)
-                //Emit the signal to sinalize the next phrase bank
-                    EmitSignal(nameof(NextScene));
-            else if(skipText){
-                skipText = false;
+                    else if( phrasei > PHRASES.Length)
+                    //Emit the signal to sinalize the next phrase bank
+                        EmitSignal(nameof(NextScene));
+                    else if( charArrayIndex > charArray.Length){
+                        charArrayIndex = 0;
+                        phrasei++;
+                        UpdatePhrase(phrasei);
+                    }
+                        
+                //Called when the player wants to skip text        
+                else if(skipText){
+                    skipText = false;
 
-            }
+                }
+            
         }
-        
+        //DEBUG CODE
+        /* 
+        GD.Print(nextChari.ToString() +" "+ phrasei.ToString() + " " + PHRASES.Length.ToString() + " " + elapsed.ToString());
+        if(elapsed > 0.5)
+            GD.Print("TRIGGER SECOND IF");
+        */
+    }
+    public void UpdatePhrase(int PhraseIndex)
+    {
+        charArray = PHRASES[PhraseIndex].ToCharArray();
     }
 }
 
 
-public static class Phrases 
-{
-    // Declare member variables here. Examples:
-    // private int a = 2;
-    // private string b = "text";
-    public static string[] PhrasesScene1 = {
-        "(Narrador) Eduardo estirou as pernas, pensou em sua cama. Doía-lhe o pescoço. No canto doquarto, Curió, Péde-Vento e cabo Martim conversavam em voz baixa, numa discussão apaixonante: qual deles substituiria Quincas no coração e no leito de Quitéria do OlhoArregalado?",
-"(Eduardo) – Me digam uma coisa...",
-"(Cabo Martim) – Às suas ordens, meu comandante.",
-"(Narrador)Quem sabe não iria o comerciante mandar comprar uma bebidinha para ajudar a travessia da noite longa?",
-"(Eduardo) – Vocês vão ficar a noite toda?",
-"(Cabo Martim) – Com ele? Sim senhor. A gente era amigo.",
-"(Eduardo) – Então vou em casa, descansar um pouco – meteu a mão no bolso, retirou uma nota. Os olhos do Cabo, de Curió e Pé-de-Vento acompanhavam seus gestos.",
-"(Eduardo) – Tá aí para vocês comprarem uns sanduíches. Mas não deixem ele sozinho. Nem um minuto, hein!",
-"(Cabo Martim) – Pode ir descansado, a gente faz companhia a ele."
-    };
-    public static string[] PhrasesScene2 ={
-        "(Narrador) Negro Pastinha acordou quando sentiu o cheiro de cachaça. Antes de começar a beber, Curió e Pé-de-Vento acenderam cigarros.",
-"(Negro pastinha)– Está um senhor! Um defunto porreta!",
-"(Negro pastinha)– Um defunto porreta!",
-"(Narrador)Quincas sorriu com o elogio, o negro retribuiu-lhe o sorriso:",
-"(Negro pastinha)– Paizinho...",
-"(Narrador)Curió e Pé-de-Vento voltaram com caixões, um pedaço de salame e algumas garrafas cheias. Fizeram um semicírculo em torno ao morto e então Curió propôs rezarem em conjunto o Padre-Nosso.",
-"(Narrador)Curió puxa a reza, mas os outros passam dificuldade ao acompanha-lo. Curió indigna-se:",
-"(Curió)– Cambada de burros...",
-"(Cabo Martim) – Falta de treino...",
-"(Cabo Martim) – Mas já foi alguma coisa. O resto o padre faz amanhã."
-    };
-    // Called when the node enters the scene tree for the first time.
-    public static string[] PhrasesScene3 = {
-    "(Narrador) Entre cabo Martim e Curió recomeçou a discussão sobre Quitéria do Olho Arregalado. Com a bebida, Curió ficava mais combativo, elevava a voz em defesa dos seus interesses. Negro Pastinha reclamou:",
-    "(Negro Pastinha) – Vocês não têm vergonha de disputar a mulher dele na vista dele? Ele ainda quente e vocês que nem urubu em carniça?",
-    "(Pé-de-Vento.)– Ele é que pode decidir... – disse Pé-de-Vento.",
-    "(Barulho vindo do caixão)– Hum!",
-    "(Negro Pastinha) – Tá vendo? Ele não está gostando dessa conversa.",
-    "(Cabo Martim) – Vamos dar um gole a ele também... –"
-    };
 
-//  // Called every frame. 'delta' is the elapsed time since the previous frame.
-//  public override void _Process(float delta)
-//  {
-//      
-//  }
-}
