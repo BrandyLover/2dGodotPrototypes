@@ -1,18 +1,19 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://main.cs" type="Script" id=1]
 [ext_resource path="res://sprites/titlescreen.jpg" type="Texture" id=2]
 [ext_resource path="res://fonts/TitleScreen.png" type="Texture" id=3]
 [ext_resource path="res://Quit.cs" type="Script" id=4]
-[ext_resource path="res://audio/2.ogg" type="AudioStream" id=5]
-[ext_resource path="res://audio/1.ogg" type="AudioStream" id=6]
-[ext_resource path="res://audio/3.ogg" type="AudioStream" id=7]
-[ext_resource path="res://audio/4.ogg" type="AudioStream" id=8]
-[ext_resource path="res://audio/5.ogg" type="AudioStream" id=9]
-[ext_resource path="res://audio/6.ogg" type="AudioStream" id=10]
-[ext_resource path="res://audio/7.ogg" type="AudioStream" id=11]
-[ext_resource path="res://audio/8.ogg" type="AudioStream" id=12]
-[ext_resource path="res://audio/9.ogg" type="AudioStream" id=13]
+[ext_resource path="res://sprites/New Piskel.png" type="Texture" id=5]
+[ext_resource path="res://audio/2.ogg" type="AudioStream" id=6]
+[ext_resource path="res://audio/1.ogg" type="AudioStream" id=7]
+[ext_resource path="res://audio/3.ogg" type="AudioStream" id=8]
+[ext_resource path="res://audio/4.ogg" type="AudioStream" id=9]
+[ext_resource path="res://audio/5.ogg" type="AudioStream" id=10]
+[ext_resource path="res://audio/6.ogg" type="AudioStream" id=11]
+[ext_resource path="res://audio/7.ogg" type="AudioStream" id=12]
+[ext_resource path="res://audio/8.ogg" type="AudioStream" id=13]
+[ext_resource path="res://audio/9.ogg" type="AudioStream" id=14]
 
 [node name="main" type="Node2D"]
 script = ExtResource( 1 )
@@ -97,40 +98,46 @@ texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( -5, 192, 76, 44 )
 
+[node name="Credits" type="Sprite" parent="SelectionScreen"]
+visible = false
+position = Vector2( 449.75, 419.344 )
+scale = Vector2( 2.17332, 1.52289 )
+texture = ExtResource( 5 )
+
 [node name="Sound" type="Node" parent="."]
 
 [node name="Track1" type="AudioStreamPlayer" parent="Sound"]
-stream = ExtResource( 5 )
-bus = "Music"
-
-[node name="Track2" type="AudioStreamPlayer" parent="Sound"]
 stream = ExtResource( 6 )
 bus = "Music"
 
-[node name="Track3" type="AudioStreamPlayer" parent="Sound"]
+[node name="Track2" type="AudioStreamPlayer" parent="Sound"]
 stream = ExtResource( 7 )
 bus = "Music"
 
-[node name="Track4" type="AudioStreamPlayer" parent="Sound"]
+[node name="Track3" type="AudioStreamPlayer" parent="Sound"]
 stream = ExtResource( 8 )
 bus = "Music"
 
-[node name="Track5" type="AudioStreamPlayer" parent="Sound"]
+[node name="Track4" type="AudioStreamPlayer" parent="Sound"]
 stream = ExtResource( 9 )
 bus = "Music"
 
-[node name="Track6" type="AudioStreamPlayer" parent="Sound"]
+[node name="Track5" type="AudioStreamPlayer" parent="Sound"]
 stream = ExtResource( 10 )
 bus = "Music"
 
-[node name="Track7" type="AudioStreamPlayer" parent="Sound"]
+[node name="Track6" type="AudioStreamPlayer" parent="Sound"]
 stream = ExtResource( 11 )
 bus = "Music"
 
-[node name="Track8" type="AudioStreamPlayer" parent="Sound"]
+[node name="Track7" type="AudioStreamPlayer" parent="Sound"]
 stream = ExtResource( 12 )
 bus = "Music"
 
-[node name="Track9" type="AudioStreamPlayer" parent="Sound"]
+[node name="Track8" type="AudioStreamPlayer" parent="Sound"]
 stream = ExtResource( 13 )
+bus = "Music"
+
+[node name="Track9" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource( 14 )
 bus = "Music"

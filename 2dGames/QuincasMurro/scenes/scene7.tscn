@@ -1,15 +1,69 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://sprites/bg/bar.png" type="Texture" id=1]
+[ext_resource path="res://scene7.cs" type="Script" id=1]
+[ext_resource path="res://sprites/bg/bar.png" type="Texture" id=2]
+[ext_resource path="res://audio/scene7.ogg" type="AudioStream" id=3]
+[ext_resource path="res://charac/martim.tscn" type="PackedScene" id=4]
+[ext_resource path="res://sprites/characters/quincas.png" type="Texture" id=5]
+[ext_resource path="res://sprites/characters/paste_nego.png" type="Texture" id=6]
+[ext_resource path="res://sprites/characters/quiteria.png" type="Texture" id=7]
+[ext_resource path="res://sprites/characters/curio.png" type="Texture" id=8]
+[ext_resource path="res://sprites/characters/fleet_foot.png" type="Texture" id=9]
+[ext_resource path="res://TextFrame.tscn" type="PackedScene" id=10]
+[ext_resource path="res://TextFrameScripts/TextFrame7.cs" type="Script" id=11]
 
 [node name="scene7" type="Node2D"]
+script = ExtResource( 1 )
 
 [node name="bg" type="TextureRect" parent="."]
 margin_right = 1024.0
 margin_bottom = 600.0
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 expand = true
 stretch_mode = 1
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="ChangeScene" type="Node" parent="."]
+
+[node name="Dublagem" type="AudioStreamPlayer" parent="ChangeScene"]
+stream = ExtResource( 3 )
+bus = "Dublagem"
+
+[node name="Fade" type="ColorRect" parent="ChangeScene"]
+visible = false
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Timer" type="Timer" parent="ChangeScene"]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[node name="martim" parent="." instance=ExtResource( 4 )]
+position = Vector2( 371.618, 233.482 )
+
+[node name="martim2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 406.287, 283.224 )
+texture = ExtResource( 5 )
+
+[node name="martim3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 418.345, 346.532 )
+texture = ExtResource( 6 )
+
+[node name="martim4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 344.486, 323.922 )
+texture = ExtResource( 7 )
+
+[node name="martim5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 606.762, 361.606 )
+texture = ExtResource( 8 )
+
+[node name="martim6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 505.771, 375.172 )
+texture = ExtResource( 9 )
+
+[node name="TextFrame" parent="." instance=ExtResource( 10 )]
+script = ExtResource( 11 )

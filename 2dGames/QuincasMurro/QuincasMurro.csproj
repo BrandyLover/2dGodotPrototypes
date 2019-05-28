@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="coffin1.cs" />
     <Compile Include="coffin2.cs" />
+    <Compile Include="coffin3.cs" />
     <Compile Include="main.cs" />
     <Compile Include="MusicPlayer.cs" />
     <Compile Include="Phrases.cs" />
@@ -58,10 +59,13 @@
     <Compile Include="Quit.cs" />
     <Compile Include="scene4.cs" />
     <Compile Include="scene5.cs" />
+    <Compile Include="scene7.cs" />
     <Compile Include="TextFrame.cs" />
     <Compile Include="TextFrameScripts\TextFrame2.cs" />
     <Compile Include="TextFrameScripts\TextFrame3.cs" />
+    <Compile Include="TextFrameScripts\TextFrame4.cs" />
     <Compile Include="TextFrameScripts\TextFrame5.cs" />
+    <Compile Include="TextFrameScripts\TextFrame7.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

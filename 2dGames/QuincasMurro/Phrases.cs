@@ -76,7 +76,12 @@ public static class Phrases
 "(Narrador)Quincas Sentara-se com a cabeça reclinada no peito de Quitéria, as pernas estiradas. Um dos rapazolas, ao passar, tropeçou nas pernas de Quincas, quase caiu, reclamou com maus modos.",
 
  "(Narrador)Negro Pastinha não gostou do jeito do fumador de maconha. Naquela noite.",
-"(Negro pastinha) – Hoje a noite é do Quincas, ele tem todos os direitos, inclusive o de estirar as pernas como bem quiser  e entender"
+"(Negro pastinha) – Hoje a noite é do Quincas, ele tem todos os direitos, inclusive o de estirar as pernas como bem quiser  e entender",
+ "(Narrador)Minutos depois, porém, um outro, do mesmo grupo de maconheiros, quis também passar. ",
+
+"(Rapaz genérico) – Afasta as perna, ô cabra da peste ! (Fala inventada)",
+"(Narrador) Quincas fez que não ouviu. Empurrou-o então o magricela. Deu-lhe Quincas uma cabeçada, a inana começou. Negro Pastinha segurou o rapaz e o atirou em cima de outra mesa."
+
 
     };
 }

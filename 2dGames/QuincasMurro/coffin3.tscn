@@ -1,0 +1,66 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://coffin3.cs" type="Script" id=1]
+[ext_resource path="res://sprites/bg/casa quincas.png" type="Texture" id=2]
+[ext_resource path="res://charac/eduardo.tscn" type="PackedScene" id=3]
+[ext_resource path="res://sprites/characters/quincas.png" type="Texture" id=4]
+[ext_resource path="res://charac/martim.tscn" type="PackedScene" id=5]
+[ext_resource path="res://sprites/characters/fleet_foot.png" type="Texture" id=6]
+[ext_resource path="res://sprites/characters/curio.png" type="Texture" id=7]
+[ext_resource path="res://sprites/characters/paste_nego.png" type="Texture" id=8]
+[ext_resource path="res://TextFrame.tscn" type="PackedScene" id=9]
+[ext_resource path="res://TextFrameScripts/TextFrame4.cs" type="Script" id=10]
+[ext_resource path="res://audio/coffin3.ogg" type="AudioStream" id=11]
+
+[node name="coffin3" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="eduardo" parent="TextureRect" instance=ExtResource( 3 )]
+position = Vector2( 672.12, 387.94 )
+rotation = -0.0841011
+texture = ExtResource( 4 )
+
+[node name="martim" parent="TextureRect" instance=ExtResource( 5 )]
+position = Vector2( 545.891, 400.262 )
+
+[node name="martim2" parent="TextureRect" instance=ExtResource( 5 )]
+position = Vector2( 812.02, 395.597 )
+texture = ExtResource( 6 )
+
+[node name="martim3" parent="TextureRect" instance=ExtResource( 5 )]
+position = Vector2( 661.474, 241.639 )
+texture = ExtResource( 7 )
+
+[node name="martim4" parent="TextureRect" instance=ExtResource( 5 )]
+position = Vector2( 808.066, 245.111 )
+texture = ExtResource( 8 )
+
+[node name="TextFrame" parent="." instance=ExtResource( 9 )]
+script = ExtResource( 10 )
+
+[node name="ChangeScene" type="Node" parent="."]
+
+[node name="Dublagem" type="AudioStreamPlayer" parent="ChangeScene"]
+stream = ExtResource( 11 )
+bus = "Dublagem"
+
+[node name="Fade" type="ColorRect" parent="ChangeScene"]
+visible = false
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Timer" type="Timer" parent="ChangeScene"]
+wait_time = 2.0
+one_shot = true
+autostart = true
