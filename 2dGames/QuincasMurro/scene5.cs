@@ -26,13 +26,14 @@ public class scene5 : Node2D
     public void _Free()
     {
         if(GetParent().Name == "main")
-            GetParent().GetNode("coffin2").QueueFree();
+            GetParent().GetNode("scene4").QueueFree();
         GetNode<AudioStreamPlayer>("ChangeScene/Dublagem").Play();
     }
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.
-//  public override void _Process(float delta)
-//  {
-//      
-//  }
+    public override void _Process(float delta)
+    {
+        if(Input.IsActionPressed("ui_accept"))
+            _DublagemEnd();
+    }
 }

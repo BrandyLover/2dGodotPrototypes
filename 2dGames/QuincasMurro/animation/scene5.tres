@@ -22,8 +22,104 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray(  ),
-"transitions": PoolRealArray(  ),
+"times": PoolRealArray( 0, 6.1 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [  ]
+"values": [ Vector2( -68.3678, 492.696 ), Vector2( 438.687, 476.735 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../paste_nego:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 3.5, 4, 6.1, 7.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -68.0143, 500.154 ), Vector2( 281.714, 485.584 ), Vector2( 344.246, 484.646 ), Vector2( 567.824, 483.353 ), Vector2( 506.007, 491.518 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../paste_nego:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 4, 6.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.158, 0.158 ), Vector2( 0.158, 0.158 ), Vector2( -0.158, 0.158 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../fleet_foot:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 4.2, 6.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -63.8451, 488.193 ), Vector2( 250.154, 483.193 ), Vector2( 396.154, 481.193 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../martim:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 6.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -51.6567, 490.409 ), Vector2( 327.407, 476.413 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../curio:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.1, 6.1, 7.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -82.0572, 495.251 ), Vector2( -82.0572, 495.251 ), Vector2( 56.7383, 495.251 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../quiteira:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0.1, 6.1, 7.6, 8.9, 10.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -77.2825, 497.822 ), Vector2( -77.2825, 497.822 ), Vector2( 116.331, 490.824 ), Vector2( 229.467, 495.489 ), Vector2( 364.764, 494.323 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("../martim:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 6, 7.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.158, 0.158 ), Vector2( 0.158, 0.158 ), Vector2( -0.158, 0.158 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("../fleet_foot:scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0.1, 6, 7.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.158, 0.158 ), Vector2( 0.158, 0.158 ), Vector2( -0.158, 0.158 ) ]
 }

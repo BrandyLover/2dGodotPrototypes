@@ -47,7 +47,7 @@ public class main : Node2D
         AddChild((Node2D)packedGameScene.Instance());
 
         //Debug line, change to coffin3 when implemented
-        packedGameScene = GD.Load<PackedScene>("res://scene4.tscn");
+        packedGameScene = GD.Load<PackedScene>("res://coffin3.tscn");
 
         if(GetNode("coffin2").IsInsideTree())
             GetNode("coffin2").Connect("AcabouCena",this,nameof(_AcabouCoffin2));
@@ -58,12 +58,41 @@ public class main : Node2D
         //DebugCode
         AddChild((Node2D)packedGameScene.Instance());
 
+        packedGameScene = GD.Load<PackedScene>("res://scene4.tscn");
+
+        if(GetNode("scene4").IsInsideTree())
+            GetNode("scene4").Connect("AcabouCena",this,nameof(_AcabouCoffin3));
+
+    }
+
+    public void _AcabouCoffin3()
+    {
+        AddChild((Node2D)packedGameScene.Instance());
+
         packedGameScene = GD.Load<PackedScene>("res://scene5.tscn");
 
         if(GetNode("scene4").IsInsideTree())
-            GetNode("scene4").Connect("AcabouCena",this,nameof(_AcabouCoffin2));
+            GetNode("scene4").Connect("AcabouCena",this,nameof(_AcabouScene4));
+    }
+
+    
+
+    public void _AcabouScene4()
+    {
+        AddChild((Node2D)packedGameScene.Instance());
+
+        //packedGameScene = GD.Load<PackedScene>("res://scene6.tscn");
+
+        if(GetNode("scene5").IsInsideTree())
+            GetNode("scene5").Connect("AcabouCena",this,nameof(_AcabouScene5));
+    }
+
+    public void _AcabouScene5()
+    {
 
     }
+
+    
 
     public void _Track1Finished()
     {

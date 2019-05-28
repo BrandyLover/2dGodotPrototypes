@@ -54,8 +54,8 @@ public static class Phrases
 "(Negro Pastinha) – Tou com fome –",
 "Consultaram Quincas:",
 "(Pé-de-Vento)– Tu quer ir?",
-"(Quincas) – Tou por acaso aleijado, pra ficar aqui?",
-"Saem de cena rumo ao Mestre Manuel e suas moquecas."
+"(Quincas) – Tou por acaso aleijado, pra ficar aqui?"
+
     };
 
     public static string[] PhrasesScene5 = {
@@ -68,6 +68,15 @@ public static class Phrases
 "(Quitéria) – Bandido! Cachorro! Desgraçado! Que é que tu fez pra espalhar que tava morto, dando susto na gente?",
 "(Quitéria) – Quase morri com a notícia e tu na farra, desgraçado. Quem pode com tu, Berrito, diabo de homem cheio de invenção? Tu não tem jeito, Berrito, tu ia me matando..."
 
+
+    };
+
+    public static string[] PhrasesScene7 = {
+        "(Narrrador)como eles não podiam chegar ao saveiro com as mãos abanando, resolveram passar a conversa em Cazuza, obter uns três litros de cana. Os demais sentaram-se para uma abrideira de apetite por conta da casa, em homenagem ao aniversariante.",
+"(Narrador)Quincas Sentara-se com a cabeça reclinada no peito de Quitéria, as pernas estiradas. Um dos rapazolas, ao passar, tropeçou nas pernas de Quincas, quase caiu, reclamou com maus modos.",
+
+ "(Narrador)Negro Pastinha não gostou do jeito do fumador de maconha. Naquela noite.",
+"(Negro pastinha) – Hoje a noite é do Quincas, ele tem todos os direitos, inclusive o de estirar as pernas como bem quiser  e entender"
 
     };
 }

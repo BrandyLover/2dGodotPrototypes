@@ -2,10 +2,10 @@
 
 [ext_resource path="res://scene5.cs" type="Script" id=1]
 [ext_resource path="res://sprites/bg/igreja.png" type="Texture" id=2]
-[ext_resource path="res://charac/eduardo.tscn" type="PackedScene" id=3]
-[ext_resource path="res://sprites/characters/quincas.png" type="Texture" id=4]
-[ext_resource path="res://animation/scene5.tres" type="Animation" id=5]
-[ext_resource path="res://charac/paste_nego.tscn" type="PackedScene" id=6]
+[ext_resource path="res://charac/paste_nego.tscn" type="PackedScene" id=3]
+[ext_resource path="res://charac/eduardo.tscn" type="PackedScene" id=4]
+[ext_resource path="res://sprites/characters/quincas.png" type="Texture" id=5]
+[ext_resource path="res://animation/scene5.tres" type="Animation" id=6]
 [ext_resource path="res://charac/fleet_foot.tscn" type="PackedScene" id=7]
 [ext_resource path="res://charac/martim.tscn" type="PackedScene" id=8]
 [ext_resource path="res://sprites/characters/quiteria.png" type="Texture" id=9]
@@ -25,20 +25,22 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="quincas" parent="casa quincas" instance=ExtResource( 3 )]
+[node name="paste_nego" parent="casa quincas" instance=ExtResource( 3 )]
+position = Vector2( -68.0143, 500.154 )
+scale = Vector2( 0.158, 0.158 )
+
+[node name="quincas" parent="casa quincas" instance=ExtResource( 4 )]
 position = Vector2( -68.3678, 492.696 )
 rotation = 0.00435841
-texture = ExtResource( 4 )
+scale = Vector2( 0.157684, 0.157684 )
+texture = ExtResource( 5 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="casa quincas/quincas"]
 autoplay = "scene5"
 playback_speed = 0.25
-anims/Moving = ExtResource( 5 )
-anims/coffin1 = ExtResource( 5 )
-anims/scene5 = ExtResource( 5 )
-
-[node name="paste_nego" parent="casa quincas" instance=ExtResource( 6 )]
-position = Vector2( -49.7274, 489.492 )
+anims/Moving = ExtResource( 6 )
+anims/coffin1 = ExtResource( 6 )
+anims/scene5 = ExtResource( 6 )
 
 [node name="fleet_foot" parent="casa quincas" instance=ExtResource( 7 )]
 position = Vector2( -63.8451, 488.193 )
@@ -46,10 +48,15 @@ scale = Vector2( 0.158, 0.158 )
 
 [node name="martim" parent="casa quincas" instance=ExtResource( 8 )]
 position = Vector2( -51.6567, 490.409 )
+scale = Vector2( 0.158, 0.158 )
 
 [node name="quiteira" parent="casa quincas" instance=ExtResource( 8 )]
 position = Vector2( -77.2825, 497.822 )
 texture = ExtResource( 9 )
+
+[node name="curio" parent="casa quincas" instance=ExtResource( 4 )]
+position = Vector2( -82.0572, 495.251 )
+rotation = 0.00177503
 
 [node name="TextFrame" parent="." instance=ExtResource( 10 )]
 margin_top = 0.0
