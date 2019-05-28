@@ -7,12 +7,12 @@ public class coffin2 : Node2D
     // private int a = 2;
     // private string b = "text";
     [Signal] public delegate void AcabouCena();
+    float elapsed;
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
-        if(GetParent().Name == "main")
-            GetParent().GetNode("coffin1").QueueFree();
-        GetNode<AudioStreamPlayer>("Dublagem").Play();
+        GetNode<Timer>("Timer").Connect("timeout", this, nameof(_Free));
+        
         GetNode<AudioStreamPlayer>("Dublagem").Connect("finished", this, nameof(_DublagemEnd));
     }
 
@@ -21,6 +21,13 @@ public class coffin2 : Node2D
         GetNode<AudioStreamPlayer>("Dublagem").Stop();
         GetNode<ColorRect>("Fade").SetVisible(true);
         EmitSignal(nameof(AcabouCena));
+    }
+
+    public void _Free()
+    {
+        if(GetParent().Name == "main")
+            GetParent().GetNode("coffin1").QueueFree();
+        GetNode<AudioStreamPlayer>("Dublagem").Play();
     }
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.

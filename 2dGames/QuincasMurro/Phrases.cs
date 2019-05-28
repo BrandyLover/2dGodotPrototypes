@@ -57,5 +57,18 @@ public static class Phrases
 "(Quincas) – Tou por acaso aleijado, pra ficar aqui?",
 "Saem de cena rumo ao Mestre Manuel e suas moquecas."
     };
+
+    public static string[] PhrasesScene5 = {
+        "(Narrador) Sentaram-se nos degraus da igreja do Largo, enquanto esperavam. Havia uma garrafa por acabar. Quincas deitou-se, olhava o céu, sorria sob o luar.",
+"(Quiteira) – Cadê ele? Cadê ele?",
+"(Narrador) Curió voltou acompanhado por um grupo ruidoso. Reconhecia-se facilmente, à frente do grupo, a figura majestosa de Quitéria do Olho Arregalado.",
+"(Quitéria) – Cadê ele? Cadê ele?",
+"(Curió) – Tinha corrido a notícia de que Berro Dágua bateu as botas, tava tudo de luto.",
+"(Curió) – Ele tá aqui, minha gente, é dia do aniversário dele, tamos festejando, vai ter peixada no saveiro de Mestre Manuel.",
+"(Quitéria) – Bandido! Cachorro! Desgraçado! Que é que tu fez pra espalhar que tava morto, dando susto na gente?",
+"(Quitéria) – Quase morri com a notícia e tu na farra, desgraçado. Quem pode com tu, Berrito, diabo de homem cheio de invenção? Tu não tem jeito, Berrito, tu ia me matando..."
+
+
+    };
 }
 

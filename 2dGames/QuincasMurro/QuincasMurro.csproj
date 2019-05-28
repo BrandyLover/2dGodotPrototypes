@@ -56,9 +56,12 @@
     <Compile Include="Phrases.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Quit.cs" />
+    <Compile Include="scene4.cs" />
+    <Compile Include="scene5.cs" />
     <Compile Include="TextFrame.cs" />
     <Compile Include="TextFrameScripts\TextFrame2.cs" />
     <Compile Include="TextFrameScripts\TextFrame3.cs" />
+    <Compile Include="TextFrameScripts\TextFrame5.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

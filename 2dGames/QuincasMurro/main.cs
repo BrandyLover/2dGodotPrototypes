@@ -8,7 +8,7 @@ public class main : Node2D
     // private string b = "text";
     private AudioStreamPlayer Track1,Track2;
     PackedScene packedGameScene;
-
+    
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
@@ -35,7 +35,9 @@ public class main : Node2D
     public void _PlayPressed()
     {
         this.GetNode<Panel>("SelectionScreen").SetVisible(false);
+
         AddChild((Node2D)packedGameScene.Instance());
+
         packedGameScene = GD.Load<PackedScene>("res://coffin2.tscn");
         if(GetNode("coffin1").IsInsideTree())
             GetNode("coffin1").Connect("AcabouCena",this,nameof(_AcabouCoffin1));
@@ -43,14 +45,24 @@ public class main : Node2D
 
     public void _AcabouCoffin1(){
         AddChild((Node2D)packedGameScene.Instance());
-        //packedGameScene = GD.Load<PackedScene>("res://coffin3.tscn");
+
+        //Debug line, change to coffin3 when implemented
+        packedGameScene = GD.Load<PackedScene>("res://scene4.tscn");
+
         if(GetNode("coffin2").IsInsideTree())
             GetNode("coffin2").Connect("AcabouCena",this,nameof(_AcabouCoffin2));
     }
 
     public void _AcabouCoffin2()
     {
-        
+        //DebugCode
+        AddChild((Node2D)packedGameScene.Instance());
+
+        packedGameScene = GD.Load<PackedScene>("res://scene5.tscn");
+
+        if(GetNode("scene4").IsInsideTree())
+            GetNode("scene4").Connect("AcabouCena",this,nameof(_AcabouCoffin2));
+
     }
 
     public void _Track1Finished()

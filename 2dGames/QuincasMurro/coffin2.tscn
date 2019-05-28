@@ -1,13 +1,35 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://coffin2.cs" type="Script" id=1]
 [ext_resource path="res://sprites/bg/casa quincas.png" type="Texture" id=2]
 [ext_resource path="res://charac/fleet_foot.tscn" type="PackedScene" id=3]
-[ext_resource path="res://charac/martim.tscn" type="PackedScene" id=4]
-[ext_resource path="res://charac/paste_nego.tscn" type="PackedScene" id=5]
-[ext_resource path="res://animation/coffin2.tres" type="Animation" id=6]
-[ext_resource path="res://TextFrame.tscn" type="PackedScene" id=7]
-[ext_resource path="res://TextFrameScripts/TextFrame2.cs" type="Script" id=8]
+[ext_resource path="res://animation/coffin2_2.tres" type="Animation" id=4]
+[ext_resource path="res://charac/martim.tscn" type="PackedScene" id=5]
+[ext_resource path="res://animation/coffin2_1.tres" type="Animation" id=6]
+[ext_resource path="res://charac/paste_nego.tscn" type="PackedScene" id=7]
+[ext_resource path="res://animation/coffin2.tres" type="Animation" id=8]
+[ext_resource path="res://charac/eduardo.tscn" type="PackedScene" id=9]
+[ext_resource path="res://sprites/characters/quincas.png" type="Texture" id=10]
+[ext_resource path="res://sprites/characters/curio.png" type="Texture" id=11]
+[ext_resource path="res://audio/coffin2.ogg" type="AudioStream" id=12]
+[ext_resource path="res://TextFrame.tscn" type="PackedScene" id=13]
+[ext_resource path="res://TextFrameScripts/TextFrame2.cs" type="Script" id=14]
+
+[sub_resource type="Animation" id=1]
+resource_name = "coffin2_4"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 3, 5, 6, 7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1228.98, 212.676 ), Vector2( 1192.15, 434.896 ), Vector2( 871.711, 456.995 ), Vector2( 832.423, 471.728 ) ]
+}
 
 [node name="coffin2" type="Node2D"]
 script = ExtResource( 1 )
@@ -22,29 +44,58 @@ __meta__ = {
 }
 
 [node name="fleet_foot" parent="casa quincas" instance=ExtResource( 3 )]
+position = Vector2( 1255.28, 275.607 )
 
-[node name="martim" parent="casa quincas" instance=ExtResource( 4 )]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="casa quincas/fleet_foot"]
+autoplay = "coffin2"
+anims/coffin2 = ExtResource( 4 )
 
-[node name="paste_nego" parent="casa quincas" instance=ExtResource( 5 )]
+[node name="martim" parent="casa quincas" instance=ExtResource( 5 )]
+position = Vector2( 818.286, 211.983 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="casa quincas/martim"]
+autoplay = "coffin2_1"
+anims/coffin2_1 = ExtResource( 6 )
+
+[node name="paste_nego" parent="casa quincas" instance=ExtResource( 7 )]
 position = Vector2( 575.606, 374.024 )
 scale = Vector2( 0.158, 0.158 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="casa quincas/paste_nego"]
 autoplay = "Moving2"
-playback_speed = 0.5
-anims/Moving2 = ExtResource( 6 )
+playback_speed = 0.25
+anims/Moving2 = ExtResource( 8 )
 
-[node name="TextFrame" parent="casa quincas" instance=ExtResource( 7 )]
-margin_top = 0.0
-margin_bottom = 200.0
-script = ExtResource( 8 )
+[node name="quincas" parent="casa quincas" instance=ExtResource( 9 )]
+position = Vector2( 673.956, 381.784 )
+rotation = 0.00212789
+texture = ExtResource( 10 )
 
-[node name="Dublagem" type="AudioStreamPlayer" parent="."]
-autoplay = true
-bus = "Dublagem"
+[node name="curio" parent="casa quincas" instance=ExtResource( 9 )]
+position = Vector2( 1267.04, 469.273 )
+rotation = 0.00343788
+scale = Vector2( -0.158, 0.158 )
+texture = ExtResource( 11 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="casa quincas/curio"]
+anims/coffin2_4 = SubResource( 1 )
 
 [node name="Fade" type="ColorRect" parent="."]
 visible = false
 margin_right = 1024.0
 margin_bottom = 600.0
 color = Color( 0, 0, 0, 1 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[node name="Dublagem" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+bus = "Dublagem"
+
+[node name="TextFrame" parent="." instance=ExtResource( 13 )]
+margin_top = 0.0
+margin_bottom = 200.0
+script = ExtResource( 14 )

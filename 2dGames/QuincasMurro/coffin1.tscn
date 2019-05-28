@@ -1,19 +1,51 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://coffin1.cs" type="Script" id=1]
-[ext_resource path="res://charac/casa quincas.tscn" type="PackedScene" id=2]
-[ext_resource path="res://TextFrame.tscn" type="PackedScene" id=3]
-[ext_resource path="res://audio/coffin1.ogg" type="AudioStream" id=4]
+[ext_resource path="res://sprites/bg/casa quincas.png" type="Texture" id=2]
+[ext_resource path="res://charac/martim.tscn" type="PackedScene" id=3]
+[ext_resource path="res://sprites/characters/curio.png" type="Texture" id=4]
+[ext_resource path="res://charac/fleet_foot.tscn" type="PackedScene" id=5]
+[ext_resource path="res://charac/paste_nego.tscn" type="PackedScene" id=6]
+[ext_resource path="res://charac/eduardo.tscn" type="PackedScene" id=7]
+[ext_resource path="res://animation/coffin1.tres" type="Animation" id=8]
+[ext_resource path="res://TextFrame.tscn" type="PackedScene" id=9]
+[ext_resource path="res://audio/coffin1.ogg" type="AudioStream" id=10]
 
 [node name="coffin1" type="Node2D"]
 script = ExtResource( 1 )
 
-[node name="casa quincas" parent="." instance=ExtResource( 2 )]
+[node name="casa quincas" type="TextureRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="TextFrame" parent="." instance=ExtResource( 3 )]
+[node name="curio" parent="casa quincas" instance=ExtResource( 3 )]
+position = Vector2( 881.366, 169.684 )
+texture = ExtResource( 4 )
+
+[node name="fleet_foot" parent="casa quincas" instance=ExtResource( 5 )]
+
+[node name="martim" parent="casa quincas" instance=ExtResource( 3 )]
+
+[node name="paste_nego" parent="casa quincas" instance=ExtResource( 6 )]
+
+[node name="eduardo" parent="casa quincas" instance=ExtResource( 7 )]
+position = Vector2( 441.944, 232.444 )
+rotation = -1.57343
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="casa quincas/eduardo"]
+autoplay = "coffin1"
+anims/Moving = ExtResource( 8 )
+anims/coffin1 = ExtResource( 8 )
+
+[node name="TextFrame" parent="." instance=ExtResource( 9 )]
 
 [node name="Dublagem" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 4 )
+stream = ExtResource( 10 )
 bus = "Dublagem"
 
 [node name="Fade" type="ColorRect" parent="."]
