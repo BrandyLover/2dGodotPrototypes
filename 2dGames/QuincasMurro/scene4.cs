@@ -26,7 +26,7 @@ public class scene4 : Node2D
     public void _Free()
     {
         if(GetParent().Name == "main")
-            GetParent().GetNode("coffin3").QueueFree();
+            GetParent().GetNode("coffin2").QueueFree();
         GetNode<AudioStreamPlayer>("Dublagem").Play();
     }
 
