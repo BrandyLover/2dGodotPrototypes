@@ -6,7 +6,7 @@ public class coffin2 : Node2D
     // Declare member variables here. Examples:
     // private int a = 2;
     // private string b = "text";
-    [Signal] public delegate void AcabouCena();
+    [Signal] public delegate void AcabouCena2();
     float elapsed;
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
@@ -20,7 +20,7 @@ public class coffin2 : Node2D
     {
         GetNode<AudioStreamPlayer>("Dublagem").Stop();
         GetNode<ColorRect>("Fade").SetVisible(true);
-        EmitSignal(nameof(AcabouCena));
+        EmitSignal(nameof(AcabouCena2));
     }
 
     public void _Free()
