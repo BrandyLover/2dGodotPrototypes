@@ -324,3 +324,5 @@ platform/windows/godot_res.res
 
 # compile commands (https://clang.llvm.org/docs/JSONCompilationDatabase.html)
 compile_commands.json
+*.rar
+2dGames/QuincasMurro/export/QuincasMurro_win64.rar
